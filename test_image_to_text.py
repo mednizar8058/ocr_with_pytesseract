@@ -4,8 +4,8 @@ import cv2
 import numpy as np
 
 
-image = cv2.imread('/home/mnizar/Pictures/coloredimage.jpg')
-image_path = '/home/mnizar/Pictures/coloredimage.jpg'
+image = cv2.imread('/home/user/Desktop/ocr_with_pytesseract/test2.png')
+image_path = '/home/user/Desktop/ocr_with_pytesseract/test2.png'
 
 
 class Testimagetxt(unittest.TestCase):

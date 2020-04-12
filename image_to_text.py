@@ -50,16 +50,16 @@ def pytesseract(image):
 
 
 def clean_text(txt):
-    words = txt.split()
+    words = txt.split()  # split our txt into strings and make them in a list
     # remove punctuation from each word
-
-    table = str.maketrans('', '', string.punctuation)
+    table = str.maketrans('', '', string.punctuation) # the first arg in maketrans will be replaced with the second arg
+                                                      # but the third arg will be removed
     stripped = [w.translate(table) for w in words]
     return(stripped)
 
 
 def main():
-    image_path = '/home/mnizar/Pictures/test2.png'
+    image_path = '/home/user/Desktop/ocr_with_pytesseract/test2.png'
     checked_image = check_image(image_path)
     resized_image = resize_image(checked_image, 90)
     threshold_image = apply_threshold(resized_image, False, 90)
